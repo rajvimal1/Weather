@@ -1,0 +1,49 @@
+<DOctype></DOctype>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="cnt">
+    
+    <h1>Weather</h1>
+    <input type="text" id="input" />
+    <button onclick="display()">click</button>
+    <div id="result"></div>
+    <script>
+        const apikey= 'c96b1114ea05e9abf222ecafd05a50e4'
+        async function display()
+          {
+            var city = document.getElementById("input").value;
+            const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`
+            const response=await fetch(url);
+            if(!response.ok){
+                console.log("API FETCH ERROR");
+            }
+            else{
+                const data=await response.json();
+                var result=document.getElementById("result");
+                const temp=data.main.temp;
+                result.innerHTML=temp;
+                console.log(data);
+            }
+            
+        }
+          
+          
+        
+    </script>
+    </div>
+  </body>
+</html>
+
+
+    </script>
+    
+</body>
+</html>

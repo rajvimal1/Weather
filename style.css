@@ -1,0 +1,26 @@
+body{
+    background-image: url(./image1.jpg);
+    background-position: 0%;
+    background-repeat: no-repeat;
+    back
+}
+h1{
+    color: grey;
+    align:center;
+}
+
+.cnt{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+input{
+    max-width: 150px;
+}
+button{
+    width: 60px;
+}
